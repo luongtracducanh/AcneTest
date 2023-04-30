@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "572811628578",
+    "project_id": "acne-test-2b376",
+    "storage_bucket": "acne-test-2b376.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572811628578:android:48136b153ab9f691f07a7b",
+        "android_client_info": {
+          "package_name": "au.edu.swin.sdmd.acnetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572811628578-oafnu38s73br3pumajgh8r67baf667u4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKwWC8I5gFsFR499Bj30Tkt_fOCMrAokM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572811628578-oafnu38s73br3pumajgh8r67baf667u4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
