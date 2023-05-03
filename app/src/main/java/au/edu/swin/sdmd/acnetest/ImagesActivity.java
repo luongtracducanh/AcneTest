@@ -1,6 +1,8 @@
 package au.edu.swin.sdmd.acnetest;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -20,7 +22,7 @@ import java.util.List;
 public class ImagesActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private ImageAdapter mAdapter;
-
+    private ProgressBar mProgressCircle;
     private DatabaseReference mDatabaseRef;
     private List<Upload> mUploads;
 
@@ -32,6 +34,8 @@ public class ImagesActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.hasFixedSize();
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        mProgressCircle = findViewById(R.id.progress_circle);
 
         mUploads = new ArrayList<>();
 
@@ -47,11 +51,13 @@ public class ImagesActivity extends AppCompatActivity {
                 mAdapter = new ImageAdapter(ImagesActivity.this, mUploads);
 
                 mRecyclerView.setAdapter(mAdapter);
+                mProgressCircle.setVisibility(View.INVISIBLE);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(ImagesActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                mProgressCircle.setVisibility(View.INVISIBLE);
             }
         });
     }
